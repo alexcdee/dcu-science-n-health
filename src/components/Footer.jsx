@@ -10,7 +10,6 @@ function Footer() {
           <img src={logo} alt="DCU Science & Health Society logo" />
           <div>
             <strong>DCU Science &amp; Health Society</strong>
-            <p>DCU Glasnevin Campus · Affiliated with DCU Students' Union</p>
           </div>
         </div>
 
