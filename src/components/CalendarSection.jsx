@@ -1,7 +1,6 @@
 import {
   CALENDAR_EMBED_URL,
   CALENDAR_GOOGLE_SUBSCRIBE_URL,
-  CALENDAR_ICS_URL,
   CALENDAR_WEBCAL_URL,
 } from "../data/links";
 import "./CalendarSection.css";
@@ -31,14 +30,6 @@ function CalendarSection() {
               Add to Apple / Outlook
             </a>
           </div>
-
-          <p className="calendar-note">
-            Or grab the{" "}
-            <a href={CALENDAR_ICS_URL} target="_blank" rel="noreferrer">
-              raw .ics link
-            </a>
-            .
-          </p>
         </div>
 
         <div className="calendar-embed">
