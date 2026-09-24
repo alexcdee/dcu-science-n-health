@@ -8,7 +8,7 @@ const MEMBERS = [
   { role: "Chairperson", photo: chairpersonPhoto },
   { role: "Vice Chairperson" },
   { role: "Secretary" },
-  { role: "Public Relations Officer", photo: proPhoto },
+  { role: "Public Relations Officer", photo: proPhoto, photoPosition: "center top" },
   { role: "Ordinary Member" },
   { role: "Ordinary Member" },
   { role: "Ordinary Member" },
@@ -65,7 +65,12 @@ function Committee() {
           {MEMBERS.map((member, index) => (
             <div key={index} className="committee-card">
               {member.photo ? (
-                <img src={member.photo} alt={member.role} className="committee-avatar" />
+                <img
+                  src={member.photo}
+                  alt={member.role}
+                  className="committee-avatar"
+                  style={member.photoPosition ? { objectPosition: member.photoPosition } : undefined}
+                />
               ) : (
                 <div className="committee-avatar" aria-hidden="true" />
               )}
