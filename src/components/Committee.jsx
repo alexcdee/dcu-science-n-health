@@ -1,11 +1,14 @@
 import treasurerPhoto from "../assets/committee/treasurer.jpg";
+import chairpersonPhoto from "../assets/committee/chairperson.JPG";
+import proPhoto from "../assets/committee/pro.JPG";
+import sponsorshipPhoto1 from "../assets/committee/sponorship1.JPG";
 import "./Committee.css";
 
 const MEMBERS = [
-  { role: "Chairperson" },
+  { role: "Chairperson", photo: chairpersonPhoto },
   { role: "Vice Chairperson" },
   { role: "Secretary" },
-  { role: "Public Relations Officer" },
+  { role: "Public Relations Officer", photo: proPhoto },
   { role: "Ordinary Member" },
   { role: "Ordinary Member" },
   { role: "Ordinary Member" },
@@ -19,7 +22,7 @@ const MEMBERS = [
   { role: "Design & Marketing Officer" },
   { role: "Design & Marketing Officer" },
   { role: "Content Creation Officer" },
-  { role: "Sponsorship Officer" },
+  { role: "Sponsorship Officer", photo: sponsorshipPhoto1 },
   { role: "Sponsorship Officer" },
   { role: "Sponsorship Officer" },
   { role: "Trips & Events Officer" },
