@@ -20,7 +20,7 @@ function About() {
             We bring together students from Chemical Sciences, Biotechnology, Health &amp; Human
             Performance, Mathematical Sciences, Nursing &amp; Community Health, Physical Sciences,
             and Psychology — through weekly study sessions, hands-on workshops, socials, and our
-            flagship STEM++ Week.
+            STEM++ Week.
           </p>
         </div>
 

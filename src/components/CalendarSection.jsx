@@ -1,7 +1,6 @@
 import {
   CALENDAR_EMBED_URL,
   CALENDAR_GOOGLE_SUBSCRIBE_URL,
-  CALENDAR_ICS_URL,
   CALENDAR_WEBCAL_URL,
 } from "../data/links";
 import "./CalendarSection.css";
@@ -31,8 +30,6 @@ function CalendarSection() {
               Add to Apple / Outlook
             </a>
           </div>
-
-  
         </div>
 
         <div className="calendar-embed">
