@@ -8,10 +8,12 @@ import Hero from "./components/Hero";
 import JoinCta from "./components/JoinCta";
 import Navbar from "./components/Navbar";
 import Schools from "./components/Schools";
+import Season from "./seasons";
 
 function App() {
   return (
     <>
+      <Season />
       <Navbar />
       <Hero />
       <About />

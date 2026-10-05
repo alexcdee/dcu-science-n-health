@@ -10,7 +10,7 @@ import marketingDesignPhoto2 from "../assets/committee/marketing-design2.JPG";
 import marketingDesignPhoto3 from "../assets/committee/marketing-design2.jpeg";
 import contentCreationPhoto from "../assets/committee/content-creation-officer.jpeg";
 import sponsorshipPhoto1 from "../assets/committee/sponorship1.JPG";
-import sponsorshipPhoto2 from "../assets/committee/sponorship-officer2.webp";
+import sponsorshipPhoto2 from "../assets/committee/sponorship-officer2.jpg";
 import tripsEventsPhoto from "../assets/committee/trips-events-officer.jpeg";
 import eventsResearchDesignPhoto from "../assets/committee/events-research-design-officer.jpg";
 import weeklyEventsPhoto from "../assets/committee/weekly-events-officer.png";

@@ -1,0 +1,253 @@
+/*
+  Halloween season. Everything is scoped to html.season-halloween, so it only
+  applies while the season is active (see ../config.js). Purely decorative:
+  nothing here takes pointer events or shifts layout.
+*/
+
+/* ---------- Palette: the brand blue becomes a deep violet, yellow becomes pumpkin ---------- */
+.season-halloween {
+  --navy: #2a1458;
+  --blue: #6b3fd4;
+  --blue-bright: #8b5cf6;
+  --blue-pale: #f3ecff;
+  --yellow: #ffa940;
+  --pink: #ff6b9d;
+  --ink: #1a1030;
+  --ink-soft: #574a7a;
+  --shadow-card: 0 12px 30px rgba(42, 20, 88, 0.16);
+  --shadow-pop: 0 6px 0 rgba(26, 16, 48, 0.9);
+}
+
+/* Keep the logo in tune with the violet palette. */
+.season-halloween .navbar-brand img,
+.season-halloween .hero-logo-card img,
+.season-halloween .footer-brand img {
+  filter: hue-rotate(32deg) saturate(1.05);
+}
+
+.season-halloween .btn-primary:hover {
+  box-shadow: 8px 8px 0 rgba(26, 16, 48, 0.9);
+}
+
+/* ---------- Navbar: glowing hairline, a cobweb in the corner, a tiny pumpkin ---------- */
+.season-halloween .navbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #8b5cf6 20%, #ffa940 50%, #8b5cf6 80%, transparent);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.season-halloween .navbar-scrolled::after {
+  opacity: 0.8;
+}
+
+.season-halloween .navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 96px;
+  height: 96px;
+  background: url("./art/cobweb-dark.svg") no-repeat top left / contain;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.season-halloween .navbar-brand span::after {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-left: 6px;
+  vertical-align: -3px;
+  background: url("./art/pumpkin.svg") no-repeat center / contain;
+}
+
+.season-halloween .navbar-links a:hover {
+  color: var(--blue);
+  text-shadow: 0 0 18px rgba(255, 169, 64, 0.55);
+}
+
+/* ---------- Hero: dusk sky, harvest moon ---------- */
+.season-halloween .hero {
+  background:
+    radial-gradient(60% 50% at 82% 8%, rgba(255, 178, 89, 0.28), transparent 70%),
+    linear-gradient(180deg, #ece0ff 0%, #fbeeea 62%, #ffffff 100%);
+}
+
+.season-halloween .hero::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: 2%;
+  width: 260px;
+  height: 260px;
+  background: url("./art/moon.svg") no-repeat center / contain;
+  pointer-events: none;
+  z-index: 0;
+  animation: moon-bob 9s ease-in-out infinite;
+}
+
+.season-halloween .hero-shape-2 {
+  border-color: rgba(107, 63, 212, 0.28);
+}
+
+.season-halloween .hero-shape-3 {
+  background: #ffa940;
+  opacity: 0.5;
+}
+
+.season-halloween .hero-logo-card {
+  box-shadow: 0 0 0 8px rgba(255, 169, 64, 0.18), 0 18px 44px rgba(42, 20, 88, 0.28);
+}
+
+/* ---------- Small details ---------- */
+.season-halloween .section-label::before {
+  content: "";
+  width: 15px;
+  height: 8px;
+  background: currentColor;
+  -webkit-mask: url("./art/bat.svg") no-repeat center / contain;
+  mask: url("./art/bat.svg") no-repeat center / contain;
+}
+
+.season-halloween .committee-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.season-halloween .committee-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(107, 63, 212, 0.18), 0 0 0 1.5px rgba(255, 169, 64, 0.55);
+}
+
+.season-halloween ::selection {
+  background: #ffa940;
+  color: #1a1030;
+}
+
+/* ---------- Cobwebs: top corner of each section, alternating sides ---------- */
+.season-halloween .section,
+.season-halloween .footer {
+  position: relative;
+}
+
+.season-halloween .section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  background: url("./art/cobweb-dark.svg") no-repeat top left / contain;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.season-halloween .section:nth-of-type(even)::before {
+  left: auto;
+  right: 0;
+  transform: scaleX(-1);
+}
+
+/* ---------- Pumpkins tucked into section corners ---------- */
+.season-halloween .events::after,
+.season-halloween .committee::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  width: 58px;
+  height: 58px;
+  background: no-repeat bottom / contain;
+  filter: drop-shadow(0 4px 6px rgba(42, 20, 88, 0.22));
+  pointer-events: none;
+}
+
+.season-halloween .events::after {
+  right: 4%;
+  background-image: url("./art/pumpkin.svg");
+}
+
+.season-halloween .committee::after {
+  left: 4%;
+  background-image: url("./art/pumpkin-plain.svg");
+}
+
+/* ---------- Footer: graveyard skyline rising out of the footer ---------- */
+.season-halloween .footer {
+  margin-top: 0;
+}
+
+.season-halloween .footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 110px;
+  background: url("./art/graveyard.svg") no-repeat center bottom / cover;
+  pointer-events: none;
+}
+
+.season-halloween .footer-links a:hover {
+  color: #ffa940;
+}
+
+/* ---------- Fireflies ---------- */
+.fireflies {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.fireflies i {
+  position: absolute;
+  bottom: -10px;
+  border-radius: 50%;
+  background: #ffc15a;
+  box-shadow: 0 0 8px 2px rgba(255, 169, 64, 0.65);
+  opacity: 0;
+  animation: firefly-rise linear infinite;
+}
+
+@keyframes firefly-rise {
+  0% { transform: translate(0, 0); opacity: 0; }
+  10% { opacity: 0.85; }
+  50% { transform: translate(var(--drift), -55vh); opacity: 0.6; }
+  90% { opacity: 0.85; }
+  100% { transform: translate(calc(var(--drift) * -0.6), -112vh); opacity: 0; }
+}
+
+@keyframes moon-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+@media (max-width: 900px) {
+  .season-halloween .hero::before {
+    width: 170px;
+    height: 170px;
+    top: -20px;
+    right: -20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .season-halloween .section::before { width: 80px; height: 80px; }
+  .season-halloween .events::after,
+  .season-halloween .committee::after { display: none; }
+  .season-halloween .footer::before { height: 70px; }
+  .fireflies i:nth-child(n + 8) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fireflies { display: none; }
+  .season-halloween .hero::before { animation: none; }
+}
