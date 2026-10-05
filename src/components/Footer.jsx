@@ -8,10 +8,7 @@ function Footer() {
       <div className="container footer-inner">
         <div className="footer-brand">
           <img src={logo} alt="DCU Science & Health Society logo" />
-          <div>
-            <strong>DCU Science &amp; Health Society</strong>
-            <p>DCU Glasnevin Campus · Affiliated with DCU Students' Union</p>
-          </div>
+          <strong>DCU Science &amp; Health Society</strong>
         </div>
 
         <div className="footer-links">

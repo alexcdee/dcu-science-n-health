@@ -1,7 +1,7 @@
 import { INSTAGRAM_URL, SIGNUP_URL, TIKTOK_URL } from "../data/links";
 import "./JoinCta.css";
 
-const PERKS = ["Pub Quiz", "Movie Nights", "Mini Games", "Weekly Study Sessions", "Workshops"];
+const PERKS = ["Pub Quiz", "Mini Games", "Weekly Study Sessions", "Workshops"];
 
 function JoinCta() {
   return (

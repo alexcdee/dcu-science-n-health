@@ -17,6 +17,7 @@ function Events() {
             <article key={index} className="event-card">
               <span className="event-tag">{event.tag}</span>
               <h3>{event.title}</h3>
+              <h3>{event.room}</h3>
               {(event.date || event.location) && (
                 <p className="event-meta">
                   {[event.date, event.location].filter(Boolean).join(" · ")}
@@ -29,7 +30,7 @@ function Events() {
 
         <div className="stem-banner">
           <div>
-            <span className="stem-banner-label">Flagship event</span>
+            {/* <span className="stem-banner-label">Flagship event</span> */}
             <h3>{STEM_WEEK.title}</h3>
             <p className="stem-banner-dates">{STEM_WEEK.dates}</p>
             <p className="stem-banner-blurb">{STEM_WEEK.blurb}</p>

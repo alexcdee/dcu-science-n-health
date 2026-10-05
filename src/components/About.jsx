@@ -4,7 +4,7 @@ const STATS = [
   { value: "7", label: "Schools represented" },
   { value: "300+", label: "Members" },
   { value: "20+", label: "Events per year" },
-  { value: "1", label: "Community" },
+  { value: "1", label: "Big Ball" },
 ];
 
 function About() {

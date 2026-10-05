@@ -32,14 +32,7 @@ function CalendarSection() {
             </a>
           </div>
 
-          <p className="calendar-note">
-            QR code coming soon — the current link is too long to scan reliably. Until then, use
-            the buttons above or grab the{" "}
-            <a href={CALENDAR_ICS_URL} target="_blank" rel="noreferrer">
-              raw .ics link
-            </a>
-            .
-          </p>
+  
         </div>
 
         <div className="calendar-embed">
